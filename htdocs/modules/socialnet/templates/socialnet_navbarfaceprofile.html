@@ -1,0 +1,138 @@
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+	//Adjust panel height
+	$.fn.adjustPanel = function(){ 
+		$(this).find("ul, .subpanel").css({ 'height' : 'auto'}); //Reset subpanel and ul height
+		
+		var windowHeight = $(window).height(); //Get the height of the browser viewport
+		var panelsub = $(this).find(".subpanel").height(); //Get the height of subpanel	
+		var panelAdjust = windowHeight - 100; //Viewport height - 100px (Sets max height of subpanel)
+		var ulAdjust =  panelAdjust - 25; //Calculate ul size after adjusting sub-panel (27px is the height of the base panel)
+		
+		if ( panelsub >= panelAdjust ) {	 //If subpanel is taller than max height...
+			$(this).find(".subpanel").css({ 'height' : panelAdjust }); //Adjust subpanel to max height
+			$(this).find("ul").css({ 'height' : ulAdjust}); //Adjust subpanel ul to new size
+		}
+		else if ( panelsub < panelAdjust ) { //If subpanel is smaller than max height...
+			$(this).find("ul").css({ 'height' : 'auto'}); //Set subpanel ul to auto (default size)
+		}
+	};
+	
+	//Execute function on load
+	$("#chatpanel").adjustPanel(); //Run the adjustPanel function on #chatpanel
+	$("#alertpanel").adjustPanel(); //Run the adjustPanel function on #alertpanel
+	
+	//Each time the viewport is adjusted/resized, execute the function
+	$(window).resize(function () { 
+		$("#chatpanel").adjustPanel();
+		$("#alertpanel").adjustPanel();
+	});
+	
+	//Click event on Chat Panel + Alert Panel	
+	$("#chatpanel a:first, #alertpanel a:first").click(function() { //If clicked on the first link of #chatpanel and #alertpanel...
+		if($(this).next(".subpanel").is(':visible')){ //If subpanel is already active...
+			$(this).next(".subpanel").hide(); //Hide active subpanel
+			$("#footpanel li a").removeClass('active'); //Remove active class on the subpanel trigger
+		}
+		else { //if subpanel is not active...
+			$(".subpanel").hide(); //Hide all subpanels
+			$(this).next(".subpanel").toggle(); //Toggle the subpanel to make active
+			$("#footpanel li a").removeClass('active'); //Remove active class on all subpanel trigger
+			$(this).toggleClass('active'); //Toggle the active class on the subpanel trigger
+		}
+		return false; //Prevent browser jump to link anchor
+	});
+	
+	//Click event outside of subpanel
+	$(document).click(function() { //Click anywhere and...
+		$(".subpanel").hide(); //hide subpanel
+		$("#footpanel li a").removeClass('active'); //remove active class on subpanel trigger
+	});
+	$('.subpanel ul').click(function(e) { 
+		e.stopPropagation(); //Prevents the subpanel ul from closing on click
+	});
+	
+	//Delete icons on Alert Panel
+	$("#alertpanel li").hover(function() {
+		$(this).find("a.delete").css({'visibility': 'visible'}); //Show delete icon on hover
+	},function() {
+		$(this).find("a.delete").css({'visibility': 'hidden'}); //Hide delete icon on hover out
+	});
+	
+});
+</script>
+
+<div id="footpanel">
+	<ul id="mainpanel">    	
+        <li><a href="<{$xoops_url}>/index.php" class="home">Home <small>Home</small></a></li>
+        <li><a href="<{$xoops_url}>/modules/socialnet/" class="profile">View Profile <small>View Profile</small></a></li>
+        <li><a href="<{$xoops_url}>/modules/socialnet/edituser.php" class="editprofile">Edit Profile <small>Edit Profile</small></a></li>
+        <li><a href="<{$xoops_url}>/modules/socialnet/contactus.php" class="contacts">Contacts <small>Contacts</small></a></li>
+        <li><a href="<{$xoops_url}>/modules/socialnet/scrapbook.php" class="messages">Messages (10) <small>Messages</small></a></li>
+        <li><a href="<{$xoops_url}>/modules/socialnet/album.php" class="photos">Photos <small>Photos</small></a></li>
+        <li><a href="<{$xoops_url}>/modules/socialnet/audio.php" class="playlist">Play List <small>Play List</small></a></li>
+        <li><a href="<{$xoops_url}>/modules/socialnet/youtube.php" class="videos">Videos <small>Videos</small></a></li>
+
+        <li id="alertpanel">
+        	<a href="#" class="alerts">Alerts</a>
+
+            <div class="subpanel">
+            <h3><span> &ndash; </span>Notifications</h3>
+            <ul>
+            	<li class="view"><a href="#">View All</a></li>
+            	<?php if ( bp_has_activities( 'type=sitewide&per_page=5&max=5' ) ) : ?>
+				
+					<ul class="activity-list">
+					<?php while ( bp_activities() ) : bp_the_activity(); ?>
+						<li class="<?php bp_activity_css_class() ?>">
+				
+							<?php bp_activity_content() ?>
+						</li>
+					<?php endwhile; ?>
+					</ul>
+				
+				<?php else: ?>
+				
+					<div class="widget-error">
+						<?php _e('There has been no recent site activity.', 'buddypress') ?>
+					</div>
+				
+				<?php endif;?>
+
+
+            </ul>
+            </div>
+        </li>
+        <li id="chatpanel">
+        	<a href="#" class="chat">Friends (<strong><{$nb_friends}> active</strong>) </a>
+            <div class="subpanel">
+            <h3><span> &ndash; </span>Friends Online</h3>
+
+<{ if $allow_friends==1 }>
+<div id="socialnet-profile-friends" class="outer">
+<h2 id="title-friends" class="head"><{$lang_friendstitle}> ( <{$nb_friends}> )</h2>
+<{if $nb_friends==0}><p id="nofriends"><{$lang_nofriendsyet}></p><{ /if }>       
+<{section name=i loop=$friends}>
+<div class="socialnet-profile-friend <{cycle values=" odd,even"}>">    	
+<a href="<{$xoops_url}>/modules/socialnet/index.php?uid=<{$friends[i].uid}>" alt="<{$friends[i].uname}>" title="<{$friends[i].uname}>"><{ if $friends[i].user_avatar=="blank.gif"}><img class="socialnet-profile-friend-photo" src="<{$xoops_url}>/modules/socialnet/images/menu/barchatfriends.gif" border="0" width="22" height="22" ><{ else }><img class="socialnet-profile-friend-photo" src="<{$xoops_upload_url}>/<{$friends[i].user_avatar}>" border="0" width="22" height="22" ><{/if}><{$friends[i].uname}> </a>
+</div>
+<{/section}>
+<p id="socialnet-profile-friend-viewall" class="foot">
+<a href="<{$xoops_url}>/modules/socialnet/friends.php?uid=<{$uid_owner}>"><{$lang_viewallfriends}></a>
+</p>
+</div>
+<{ /if }>
+				
+				  <div id="message" class="info">
+					<p>No friend connections found.</p>
+				  </div>
+				
+				<?php endif;?>
+            </div>
+        </li>
+        
+        
+	</ul>
+</div>
+<?php } ?>

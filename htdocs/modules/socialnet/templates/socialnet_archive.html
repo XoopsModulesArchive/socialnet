@@ -1,0 +1,50 @@
+<{include file="db:socialnet_navbarbelow.html"}>
+
+<table>
+  <tr>
+    <th><{$lang_newsarchives}></th>
+  </tr>
+
+<{foreach item=year from=$years}>
+<{foreach item=month from=$year.months}>
+
+  <tr class="even">
+    <td><a href="./newsarchive.php?year=<{$year.number}>&amp;month=<{$month.number}>"><{$month.string}> <{$year.number}></a></td>
+  </tr>
+
+<{/foreach}>
+<{/foreach}>
+
+</table>
+
+<{if $show_articles == true}>
+
+<table>
+  <tr>
+    <th><{$lang_articles}></th><th align="center"><{$lang_actions}></th><th align="center"><{$lang_views}></th><th align="center"><{$lang_date}></th>
+  </tr>
+
+  <{foreach item=story from=$stories}>
+
+  <tr class="<{cycle values="even,odd"}>">
+    <td><{$story.title}></td><td align="center"><a href="<{$story.print_link}> "target='_blank'><img src="images/icons/print.gif" alt="<{$lang_printer}>" /></a> <a href="<{$story.mail_link}>" target="_top" /><img src="images/icons/friend.gif" alt="<{$lang_sendstory}>" /></td><td align="center"><{$story.counter}></td><td align="center"><{$story.date}></td>
+  </tr>
+
+  <{/foreach}>
+
+</table>
+
+<div>
+<{$lang_storytotal}>
+</div>
+
+<{/if}>
+
+<br><br><br>
+<center>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+<{include file="db:socialnet_navbarfacebookstyle.html"}>
+<{include file="db:socialnet_footer.html"}>

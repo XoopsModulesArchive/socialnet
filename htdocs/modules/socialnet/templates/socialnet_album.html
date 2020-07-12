@@ -1,0 +1,89 @@
+<{include file="db:socialnet_navbar.html"}>
+
+<{ if ($showForm==1) }>
+	<div id="socialnet-album-form" class="outer">
+	  <h2 class="head">
+      &nbsp;
+	  <img border="0" src="<{$xoops_url}>/modules/socialnet/images/menu/photo.gif" width="32" height="32">
+      <{$lang_formtitle}>
+	  </h2>
+      <form name="form_picture"  id="form_picture" action="<{$xoops_url}>/modules/socialnet/submit_album.php" method="post"  enctype="multipart/form-data" >
+        <p class="odd"><{$token}><label class="socialnet-album-label-alert"><{$lang_youcanupload}></label></p>
+        <p class="even"><label class="socialnet-album-label-alert"><{$lang_nb_pict}> <{$lang_max_nb_pict}></label></p>
+        <p class="odd"><label class="socialnet-album-label" for="sel_photo"><{$lang_selectphoto}></label><input type='hidden' name='MAX_FILE_SIZE' value='<{$maxfilebytes}>' /><input type='file' name='sel_photo' id='sel_photo' /><input type='hidden' name='xoops_upload_file[]' id='xoops_upload_file[]' value='sel_photo' /> </p>
+        <p class="even"> <label class="socialnet-album-label" for="caption"><{$lang_caption}>:
+	    <input type='text' name='caption' id='caption' size='35' maxlength='55' value='' /> </p>
+        <p class="foot"><input type='submit' class='formButton' name='submit_button'  id='submit_button' value='<{$lang_uploadpicture}>' /></p>
+      </form>
+   </div>
+<{ /if}>
+<br><br><br>
+
+<div id="socialnet-album-container" class="outer">
+  <h2 class="head">
+  <{if $isOwner}>
+    <{$lang_mysection}>
+  <{else}>
+    <{$owner_uname}><{$section_name}>
+  <{/if}>
+  </h2>
+<!-- Begin photos section dev  -->
+<{ if $lang_nopicyet=="" }>
+<{section name=i loop=$pics_array}>
+<{ if (($pics_array[i].private == 0) || ($isOwner==1)) }>
+<div  class="socialnet-album-picture <{ cycle values=" odd,even"}>" >
+<form action="<{$xoops_url}>/modules/socialnet/delpicture.php" method="post" id="deleteform" class="socialnet-album-formquick">
+<input type="hidden" value="<{$pics_array[i].cod_img}>" name="cod_img" />
+<{$token}>
+<input name="submit" type="image" alt="<{$lang_delete}>" title="<{$lang_delete}>" src="<{$xoops_url}>/modules/socialnet/images/icons/dele.gif"/>
+</form>
+<form action="<{$xoops_url}>/modules/socialnet/editdesc.php" method="post" id="editform" class="socialnet-album-formquick">
+<input type="hidden" value="<{$pics_array[i].cod_img}>" name="cod_img" />
+<{$token}>
+<input name="submit" type="image" alt="<{$lang_editdesc}>" title="<{$lang_editdesc}>" src="<{$xoops_url}>/modules/socialnet/images/icons/edit.gif"/>
+</form>
+<form action="<{$xoops_url}>/modules/socialnet/avatar.php" method="post" id="setavatar" class="socialnet-album-formquick">
+<input type="hidden" value="<{$pics_array[i].cod_img}>" name="cod_img" />
+<{$token}>
+<input name="submit" type="image" alt="<{$lang_avatarchange}>" title="<{$lang_avatarchange}>" src="<{$xoops_url}>/modules/socialnet/images/icons/avatar.gif"/>
+</form>
+<form action="<{$xoops_url}>/modules/socialnet/private.php" method="post" id="setprivate" class="socialnet-album-formquick">
+<input type="hidden" value="<{$pics_array[i].cod_img}>" name="cod_img" />
+<{$token}>
+<{ if $pics_array[i].private == 1}> 
+<input type="hidden" value="0" name="private" />
+<input name="submit" type="image" alt="<{$lang_unsetprivate}>" title="<{$lang_unsetprivate}>" src="<{$xoops_url}>/modules/socialnet/images/icons/unlock.gif"/>
+<{else}>
+<input type="hidden" value="1" name="private" />
+<input name="submit" type="image" alt="<{$lang_setprivate}>" title="<{$lang_setprivate}>" src="<{$xoops_url}>/modules/socialnet/images/icons/lock.gif"/>
+<{/if}></form>
+<{ if ($pics_array[i].private == 1) }>
+<p><span class="socialnet-album-private"> Private </span></p>
+<{/if}> 
+<p class="socialnet-album-picture-img"><a href="<{$xoops_url}>/uploads/socialnet/photos/resized_<{$pics_array[i].url}>" rel="lightbox[album]" title="<{$pics_array[i].desc}>"><img class="thumb" src="<{$xoops_url}>/uploads/socialnet/photos/thumb_<{$pics_array[i].url}>" rel="lightbox" title="<{$pics_array[i].desc}>"></a></p>
+<p id="socialnet-album-picture-desc"><{$pics_array[i].desc}></p>
+</div>
+<br>
+<{/if}>
+<br>
+<{/section}>
+<br>
+<{else}>
+<h2 id="socialnet-album-nopic"><{$lang_nopicyet}></h2>
+<{/if}>
+<!-- The new photo here -->
+<br>
+</div>
+<!-- From here navigation pages -->
+<div style="clear:both"></div>
+<{ if $navigation!='' }>
+<div id="socialnet-navigation"><{$navigation}></div>
+<{ /if}>
+<br><br><br>
+<center>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+<br><br><br>
+<{include file="db:socialnet_footer.html"}>

@@ -1,0 +1,84 @@
+<{include file="db:socialnet_navbarbelow.html"}>
+<table>
+<div align='left'>
+<h2 class="head">&nbsp;<img border="0" src="<{$xoops_url}>/modules/socialnet/images/menu/registered.gif" width="32" height="26">
+<{$lang_welcome}></h2>
+<br />
+<{$lang_greetings}>
+</div>
+<br /><br />
+
+<table align='center'>
+    <tr>
+        <td align='right' width=58%>
+            <{$form_submit}>
+        </td>
+        <td>
+            <{$form_reset}>
+        </td>
+    </tr>
+</table>
+
+<div align='center'>
+    <{$form_letters}>
+</div>
+
+<br /><br />
+
+
+<{if $users}>
+<{$pagenav}>
+<table border='0' cellpadding='4' cellspacing='1' valign='top' width='100%' class='head'>
+
+            <tr>
+                <td align='center'><span ><b><{$sort_avatar}></b></span></td>
+                <td align='center'><span ><b><{$sort_nickname}></b></span></td>
+                <td align='center'><span ><b><{$sort_regdate}></b></span></td>
+                <td align='center'><span ><b><{$sort_email}></b></span></td>
+                <td align='center'><span ><b><{$sort_pm}></b></span></td>
+                <td align='center'><span ><b><{$sort_url}></b></span></td>
+
+                <{if $can_edit}>
+                <td align='center'><span ><b><{$functions}></b></span></td>
+                <{/if}>
+            </tr>
+            <{foreach item=user from=$users}>
+            <tr class="<{cycle values="even,odd"}>">
+<!-- $smarty.const._AM_SOCIALNET_ADD_TOPIC} -->
+                <td align='center'><{$user.avatar}></td>
+                <td align='center'><{$user.nickname}></td>
+                <td align='center'><{$user.regdate}></td>
+                <td align='center'><{$user.email}></td>
+                <td align='center'><{$user.pm}></td>
+                <td align='center'><{$user.url}></td>
+                <{if $can_edit}>
+                <td align='center'><{$user.functions}></td>
+                <{/if}>
+                
+            </tr>
+            <{/foreach}>
+        </table>
+
+<{$pagenav}>
+<{else}>
+<table border='0' cellpadding='0' cellspacing='0' valign='top' width='100%' class='head'>
+<tr><td class='bg3' align='center'>
+    <b><{$no_results}></b>
+</td></tr>
+</table>
+<{/if}>
+
+<div id="socialnet-navigation">
+	<{$pageNav}>
+</div>
+<div style="clear:both;width:100%"></div>
+<br><br><br>
+<center>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+<{include file="db:socialnet_navbarfacebookstyle.html"}>
+<{include file='db:socialnet_footer.html'}>
+
+</table>

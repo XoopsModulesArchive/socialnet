@@ -1,0 +1,98 @@
+NOTE: Thursday March 11, 2010
+
+1. This is a BETA release, it is not recommended in a real production.
+See SocialNet Module working in xoops 2.4.4 version in spanish go here
+http://www.ipwgc.com/espanol/
+
+Please reports all bugs that you find. click here
+http://www.ipwgc.com/socialnet/modules/socialnet/forumstart.php
+
+2. To download the socialnet module and the language files go here
+http://www.ipwgc.com/socialnet/modules/wfdownloads/
+
+3. These are the files languages that are available
+/solcialnet_upgrade_english/
+/solcialnet_upgrade_french/
+/solcialnet_upgrade_german/
+/solcialnet_upgrade_italian/
+/solcialnet_upgrade_portuguesebr/
+/solcialnet_upgrade_spanish/
+
+4. The following folders and files don't require translation, 
+they are ready Thursday March 11, 2010
+/solcialnet_upgrade_english/
+/solcialnet_upgrade_spanish/
+
+
+::INSTRUCTIONS TO TRANSLATE IN OTHER LANGUAGES::
+
+EXAMPLE WITH THE FRENCH LANGUAGE FOLDERS
+upload in your server all files that are in the following folders
+/socialnet_upgrade_french/modules/socialnet/language/french
+
+YOUR-SITE/modules/socialnet/language/french
+YOUR-SITE/modules/socialnet/language/french/mail_template
+YOUR-SITE/modules/socialnet/templates
+YOUR-SITE/modules/socialnet/templates/blocks
+
+UPLOADS THE FOLLOWING FILES IN THE RESPECTIVE FOLDERS
+/modules/socialnet/templates/socialnet_navbar.html
+/modules/socialnet/templates/socialnet_navbarbelow.html
+/modules/socialnet/templates/socialnet_navbarfacebookstyle.html
+/modules/socialnet/templates/socialnet_navbarfaceprofile.html
+/modules/socialnet/templates/blocks/socialnet_block_googlesearch.html
+/modules/socialnet/templates/blocks/socialnet_block_users.html
+
+
+::TRANSLATE IN OTHER LANGUAGES::
+1. You have two options to translate the SocialNet Module
+A) Translation or manual correction, working together with the Excel program.
+B) Translation or manual correction, working together with the incorporate translation tool in the socialnet modulate.
+
+TRANSLATION AND CORRECTIONS WITH THE MICROSOFT EXCEL PROGRAM
+2. Open the folder /english_onlytext/ and look for the file that you want translate in your language.
+:: This file contains only the text::
+language_socialnet_text_only/english_only_text/about.txt
+language_socialnet_text_only/english_only_text/admin.txt
+language_socialnet_text_only/english_only_text/blocks.txt
+language_socialnet_text_only/english_only_text/main.txt
+language_socialnet_text_only/english_only_text/modinfo.txt
+
+3. In the following folders you will found files translate in Excel program.
+The following folders were translated by a translation program, but they need to be corrected.
+/solcialnet_upgrade_french/
+/solcialnet_upgrade_german/
+/solcialnet_upgrade_italian/
+/solcialnet_upgrade_portuguesebr/
+
+::IMPORTANT::
+Once you have accomplished the corrections, 
+please send the files to support@ipwgc.com
+in order to update the language folders in different languages.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+::TRANSLATION AND CORRECTIONS WITH THE SOCIALNET TRANSLATION TOOL::
+
+1. Look to the left side in the user's block, language tool.
+YOURSITE/modules/socialnet/langbegin.php
+
+Instructions: Select socialnet module, 
+click send button, and follow the instructions of the language tool program.
+
+2. If your language doesn't appear in the translation tools section, 
+create it through the socialnet module administrator.
+
+::IMPORTANT::
+Once you have accomplished the corrections, please send the files to support@ipwgc.com
+in order to update the language folders in different languages.
+
+USE THE FORUM FOR SUPPORT AND QUESTIONS
+http://www.ipwgc.com/socialnet/modules/socialnet/forumstart.php
+
+Regards,
+David Yanez Osses
+Portal administrator
+http://www.ipwgc.com/socialnet/
+
+

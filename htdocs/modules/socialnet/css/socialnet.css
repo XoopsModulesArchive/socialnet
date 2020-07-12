@@ -1,0 +1,744 @@
+/*
+General properties
+*/
+
+div.socialnet-profile-group1{
+float:left;
+width:60%;
+
+}
+
+div.socialnet-profile-group2{
+float:left;
+width:40%;
+}
+
+div#socialnet-suspension {
+float:right;
+}
+
+img#socialnet-suspensiontools {
+	cursor: pointer;
+}
+
+.present{
+background-color:#FFFFCC;
+}
+
+
+div#socialnet-nav-bar{
+margin:3px;
+width:95%;
+padding:1px;
+}
+
+div#socialnet-footer{
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+text-align:right;
+}
+
+img.socialnet-nav-bar-icon {
+width:15px;
+height:15px;
+border:none;
+}
+
+
+
+p#breadcrumbs {
+	display:block;
+	margin:0px;
+	border-bottom: 2px solid;
+	margin-bottom: 5px;
+	padding:2px;
+}
+
+/*
+Search
+*/
+
+div.search-element {
+clear:both;
+}
+div.search-element-label {
+float:left;
+width:300px;
+}
+div.search-element-body {
+float:left;
+
+}
+
+/*
+Membership
+*/
+
+div.membership-element {
+clear:both;
+}
+div.membership-element-label {
+float:left;
+width:300px;
+}
+div.membership-element-body {
+float:left;
+
+}
+
+/*
+Pagelist
+*/
+
+div.pagelist-element {
+clear:both;
+}
+div.pagelist-element-label {
+float:left;
+width:300px;
+}
+div.pagelist-element-body {
+float:left;
+
+}
+
+/*
+Contact Us
+*/
+
+div.contactus-element {
+clear:both;
+}
+div.contactus-element-label {
+float:left;
+width:300px;
+}
+div.contactus-element-body {
+float:left;
+
+}
+
+/*
+Articles
+*/
+
+div.articles-element {
+clear:both;
+}
+div.articles-element-label {
+float:left;
+width:300px;
+}
+div.articles-element-body {
+float:left;
+
+}
+
+
+/*
+CONFIGS
+*/
+
+form#form_configs input {
+
+
+}
+
+form#form_configs label{
+
+}
+
+form#form_configs fieldset{
+display:inline;
+width:90%;
+}
+
+
+/* 
+Profile
+*/
+
+div#socialnet-profile-petition {
+margin:3px;
+}
+
+div#socialnet-profile-petition img {
+margin:15px 3px;
+float:left;
+}
+
+div#socialnet-album-visitors, div#socialnet-profile-search-results, div#socialnet-profile-visual, div#socialnet-profile-statistics, div#socialnet-profile-details {
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+
+div#socialnet-profile-groups, div#socialnet-profile-friends {
+margin:3px;
+padding:1px;
+width:95%;
+overflow:hidden;
+text-align:center;
+}
+
+div.socialnet-profile-friend{
+margin:1px;
+width:27%;
+height:100px;
+float:left;
+text-align:center;
+padding:5px;
+}
+
+div.socialnet-profile-friend img{
+margin:auto;
+width:60px;
+display:block;
+}
+
+
+
+div#socialnet-profile-avatar {
+
+margin:1px;
+width:45%;
+float:left;
+text-align:center;
+}
+
+div#socialnet-profile-avatar img{
+border:2px solid black;
+}
+
+div#socialnet-profile-mainvideo{
+margin:1px;
+width:45%;
+float:left;
+}
+
+
+span.socialnet-profileinfo-label {
+margin:1px 5px;
+font-weight:bold;
+width:60px;
+min-width:60px;
+display:inline;
+}
+
+span.socialnet-profileinfo-value {
+margin:1px 5px;
+}
+p.socialnet-profileinfo-valuebigtext {
+text-align:justify;
+margin:1px 5px;
+}
+
+
+p#socialnet-profile-friend-viewall
+{
+margin:1px;
+float:left;
+padding:1px;
+width:100%;
+overflow:hidden;
+}
+
+div#socialnet-profile-groups h2, div#socialnet-profile-search-results p, div#socialnet-profile-statistics p, div#socialnet-profile-details p, div#socialnet-profile-search-results h2, div#socialnet-profile-search-results h4, div#socialnet-profile-friends h2, div#socialnet-profile-visual h2, div#socialnet-profile-statistics h2, div#socialnet-profile-details h2 {
+margin:0px;
+}
+
+/****************************************************************************************************** 
+ *  SCRAPS
+ */
+ 
+a.socialnet-scraps-replyscrap {
+	clear:both;
+	cursor: pointer;
+}
+
+div#socialnet-scraps-container {
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+div#socialnet-scraps-container h2 {
+margin:0px;
+}
+
+img.avatar_scrap {
+border:1px solid;
+padding:1px;
+margin:3px;
+overflow:hidden;
+
+
+}
+
+div#socialnet-scraps-form {
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+p.socialnet-scrap-uname{
+clear:both;
+}
+
+div.socialnet-scrap-details {
+min-height:200px;
+margin:3px;
+clear:both;
+padding:1px;
+width:95%;
+}
+
+div.socialnet-scrap-avatarandname{
+float:left;
+}
+
+form.socialnet-scrap-form{
+height:75px;
+width:450px;
+border:1px solid black;
+padding:1px;
+margin:auto;
+background-color:white;
+text-align:center;
+}
+
+form.socialnet-scrap-form-delete{
+display:inline;
+}
+
+input.post{
+display:block;
+}
+
+
+div.socialnet-scrap-details-texts{
+float:left;
+width:70%;
+}
+
+div.socialnet-scrap-details-form{
+height:100px;
+margin:3px;
+clear:both;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+p.socialnet-scraps-editdelete-forms{
+float:right;
+}
+
+
+
+/* **********************************************************************************************************
+Videos
+*/
+
+div#socialnet-videos-container {
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+div.socialnet-video-container {
+margin:1px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+div.socialnet-video {
+margin:3px;
+float:left;
+overflow:hidden;
+text-align:center;
+vertical-align:bottom;
+}
+
+div.socialnet-video embed{
+margin:auto;
+}
+
+div.socialnet-video-details form {
+display:inline;
+}
+
+div.socialnet-video-details {
+text-align:left;
+margin:3px;
+float:left;
+width:50%;
+}
+
+
+h2#socialnet-videos-title {
+margin:0px;
+}
+
+
+div#socialnet-video-form p, div#socialnet-video-form h2{
+margin:0px;
+}
+div#socialnet-video-form{
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+
+/***************************************************************************************************************** 
+Audio
+*/
+
+div#socialnet-audio-form p, div#socialnet-audio-form h2, div#socialnet-audio-allaudiocontainer p, div#socialnet-audio-allaudiocontainer h2, h2#socialnet-audio-title{
+margin:0px;
+}
+
+
+div#socialnet-audio-form, div#socialnet-audio-container, div#socialnet-audio-allaudiocontainer{
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+/***************************************************************************************************************** 
+Friends
+*/
+
+div#socialnet-friends-container {
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+div#socialnet-friends-container h2{
+margin:0px;
+}
+
+div.socialnet-friend {
+margin:1px;
+width:23%;
+height:250px;
+float:left;
+text-align:center;
+}
+
+div.socialnet-friend img{
+margin:auto;
+display:block;
+}
+
+form.socialnet-friends-evaluateform, form.socialnet-friends-deleteform {
+
+display:inline;
+}
+
+/* 
+NAVIGATION
+*/
+div#socialnet-navigation {
+margin:auto;
+float:left;
+width:300px;
+overflow:hidden;
+}
+
+p#trustybw{
+display:inline;
+height:18px;
+background-image:url(../images/fans/trustybw.gif); 
+background-repeat:no-repeat;
+width:48px;
+}
+
+span#trustycolor {
+width:32px;
+background-image:url(../images/fans/trustycolor.gif);
+background-repeat:no-repeat;
+}
+
+p#coolbw{
+display:inline;
+height:18px;
+background-image:url(../images/fans/coolbw.gif); 
+background-repeat:no-repeat;
+width:48px;
+}
+
+span#coolcolor {
+width:32px;
+background-image:url(../images/fans/coolcolor.gif);
+background-repeat:no-repeat;
+}
+
+p#sexybw{
+display:inline;
+height:18px;
+background-image:url(../images/fans/sexybw.gif); 
+background-repeat:no-repeat;
+width:48px;
+}
+
+span#sexycolor {
+width:32px;
+background-image:url(../images/fans/sexycolor.gif);
+background-repeat:no-repeat;
+}
+
+p#socialnet-profile-fans {
+display:inline;
+height:18px;
+}
+/*************************************************************************************************************************************** 
+album
+***************************************************************************************************************************************/
+
+div#socialnet-album-form{
+margin:3px;
+padding:1px;
+float:left;
+width:95%;
+overflow:hidden;
+}
+
+div#socialnet-album-visitors h2, div#socialnet-album-container h2, div#socialnet-album-form h2,div#socialnet-album-form p {
+margin:0px;
+}
+
+div#socialnet-album-container{
+padding:1px;
+margin:3px;
+float:left;
+width:95%;
+overflow:hidden;
+}
+
+div.socialnet-album-picture {
+margin:0px;
+width:31%;
+height:250px;
+float:left;
+text-align:center;
+
+}
+
+div.socialnet-album-picture img{
+border:3px solid;
+padding:3px;
+}
+
+div.class {
+margin:10px;
+}
+
+form.socialnet-album-formquick {
+display:inline;
+}
+
+
+
+
+/*********************************************************************************************************
+groups
+*/
+
+div#socialnet-group-edit-members, form#socialnet-group-edit-form, form#form_group_search, form#form_group, div#socialnet-group-container, div#socialnet-groups-container, div#socialnet-mygroups-container{
+margin:3px;
+float:left;
+padding:1px;
+width:95%;
+overflow:hidden;
+}
+
+div#socialnet-group-edit-members h2, div.socialnet-group-edit-member h2, form#socialnet-group-edit-form h2, form#form_group_search h2, form#form_group h2, div#socialnet-groups-container h2, div#socialnet-mygroups-container h2, div#socialnet-group-container p,div#socialnet-group-container h2{
+margin:0px;
+}
+
+div.socialnet-group-edit-member, div.socialnet-group-my{
+margin:1px;
+width:23%;
+height:250px;
+float:left;
+text-align:center;
+}
+
+div.socialnet-group-all{
+min-height:100px;
+}
+
+div.socialnet-group-all img{
+float:left;
+margin:3px;
+}
+
+form#form_group_search p, form#socialnet-group-edit-form p, form#form_group p, div.socialnet-group-all h4, div.socialnet-group-all p{
+margin:1px;
+}
+
+form.socialnet-groups-form-becomemember,form.socialnet-groups-form-delete,form.socialnet-groups-form-edit {
+display:inline;
+}
+
+/* 
+Others
+*/
+
+.yogerrors {color:#FF0000; background-color:#FFEAF4; border-color:#FF0000; border-width:thick;}
+
+fieldset.myconfigs-fieldset {
+	border: 1px dotted #80021A;
+	padding: 10px;
+}
+
+legend.myconfigs-legend {
+	color: #80021a;
+	font-size: 1.5em;
+}
+p.alert {
+	background-color: #ffc;
+	border: 2px solid #fc6;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+div#nav{
+	margin-right:auto;
+	margin-left:auto;
+	width:100px;
+	page-break-after: always;
+	
+	
+	}
+div#title-friends div {
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	page-break-after: always;
+}
+
+div#wrapper-title-ishot div {
+	float: left;
+	margin-bottom: 10px;
+}
+div#title {
+	width: 35%;
+}
+div#title h2 {
+	font-size: 1.5em;
+}
+div#ishot {
+	width: 60%;
+}
+div#ishot form {
+	display: inline;
+}
+div#ishot p#ishot-result {
+	font-size: 0.5em;
+}
+div#album {
+margin:auto;
+text-align:center;
+
+}
+
+ul#album_photos {
+	padding: 0;
+	margin:auto;
+text-align:center;
+	
+	
+}
+ul#album_photos:after {
+	content: ".";
+	width: 95%;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	font-size: 1px;
+}
+ul#album_photos li {
+	list-style: none;
+	width: 180px;
+	float: left;
+	padding: 0;
+	margin: 0 6px 20px 0;
+}
+
+ul#friend {
+	padding: 3;
+	margin:auto;
+text-align:center;
+	
+	
+}
+ul#friend li  {
+	list-style: none;
+	width: 75px;
+	float: left;
+	padding: 0;
+	margin: 5px 6px 20px 5px;
+}
+
+ul#friend:after {
+	content: ".";
+	width: 95%;
+	clear: both;
+	display: block;
+	visibility: hidden;
+	font-size: 1px;
+}
+
+ul#album_photos li div.photo_in_album {
+	height: 240px;
+	text-align: center;
+}
+
+ul#album_photos li div.photo_in_album:hover {
+	background-color: #E1C3C3;	
+}
+ul#album_photos li div.photo_in_album p a {
+	/*background-color:#99FFFF;*/
+	height: 110px;
+	display: block;
+}
+ul#album_photos li div.photo_in_album img {
+	border: 5px solid #000;
+	padding: 2px;
+}
+ul#album_photos li div.photo_in_album a:hover img {
+	border-color: #80021A;
+}
+ul#album_photos li div.photo_in_album a:hover {
+	color: #80021A;
+}
+div.photo_in_album p#desc {
+	height: 50px;
+}
+div.photo_in_album form {
+	display: inline;
+}

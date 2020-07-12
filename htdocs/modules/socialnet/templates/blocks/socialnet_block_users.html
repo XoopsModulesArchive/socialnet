@@ -1,0 +1,293 @@
+<table border="0" width="100%">
+<tr>
+<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" ><{$block.lang_welcome}></td>
+</tr>
+</table>
+
+<!-- Begin SocialNet translate -->
+<div id="wmssg"><a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_GERMAN}>', '<{$smarty.const._MB_BLO_TO_GERMAN}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/de.gif" alt="<{$smarty.const._MB_BLO_TRANS_GERMAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_SPANISH}>', '<{$smarty.const._MB_BLO_TO_SPANISH}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/es.gif" alt="<{$smarty.const._MB_BLO_TRANS_SPANISH}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_FRENCH}>', '<{$smarty.const._MB_BLO_TO_FRENCH}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/fr.gif" alt="<{$smarty.const._MB_BLO_TRANS_FRENCH}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_ITALIAN}>', '<{$smarty.const._MB_BLO_TO_ITALIAN}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/it.gif" alt="<{$smarty.const._MB_BLO_TRANS_ITALIAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_JAPONESE}>', '<{$smarty.const._MB_BLO_TO_JAPONESE}>', 'resizable,scrollbars,status'))">
+<br>
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/jp.gif" alt="<{$smarty.const._MB_BLO_TRANS_JAPONESE}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_KOREAN}>', '<{$smarty.const._MB_BLO_TO_KOREAN}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/kr.gif" alt="<{$smarty.const._MB_BLO_TRANS_KOREAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_PORTUGUESE}>', '<{$smarty.const._MB_BLO_TO_PORTUGUESE}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/br.gif" alt="<{$smarty.const._MB_BLO_TRANS_PORTUGUESE}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_CHINESE}>', '<{$smarty.const._MB_BLO_TO_CHINESE}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/cn.gif" alt="<{$smarty.const._MB_BLO_TRANS_CHINESE}>" border="0" width="18" height="12" /></a></div>
+<b><{$smarty.const._MB_SOCIALNET_BLO_TRANSLATE}></b>
+<!-- End SocialNet translate -->
+<br><br>
+
+<table border="0" width="100%">
+	<tr>
+		<td>
+		<table border="0" width="100%">
+			<tr>
+				<td align="center"><{$block.lang_welcome}><br><{$smarty.now|date_format:"%A, %B %e, %Y"}></td>
+			</tr>
+            <{if $xoops_isuser}>
+
+            <{if $block.seeavatar == 1 }>
+			<tr>
+                <{if  $block.avatar_user != 'blank.gif' }>
+                <td align="center"><a href="<{$xoops_url}>/modules/profile/edituser.php?op=avatarform" alt="<{$block.lang_changeavatar}>">
+                <img src="<{$xoops_url}>/uploads/<{$block.avatar_user}>" /></a></td>
+                <{else}>
+                <td align="center"><a href="<{$xoops_url}>/modules/profile/edituser.php?op=avatarform">
+                <img src="<{$xoops_url}>/modules/socialnet/images/profile/noavatar.gif" alt="<{$block.lang_changeavatar}>" title="<{$block.lang_changeavatar}>" /></a></td>
+                <{/if}>
+			</tr>
+            <{/if}>
+
+            <tr>
+                <td align="center"><B><{$block.user}></B></td>
+            </tr>
+
+			<{else}>
+			<tr>
+                <td align="center"><a href="<{$xoops_url}>/register.php">
+                <img src="<{$xoops_url}>/modules/socialnet/images/users/register_eng.gif" alt="<{$block.lang_registratedsc}>" title="<{$block.lang_registratedsc}>"/></a></td>
+			</tr>
+    		<{/if}>
+
+			<{if $xoops_isuser}>
+			<{if $block.seeavatar == 1}>
+			<tr>
+				<td align="center"><img src="<{$xoops_url}>/uploads/<{$block.rankimagen}>"></td>
+			</tr>
+			<tr>
+				<td align="center"><{$block.ranktitle}></td>
+			</tr>
+			<{/if}>
+			<{/if}>
+		
+		</table>
+        <br />
+		<{if $xoops_isuser}>
+		<table border="0" width="100%">
+			<tr>
+				<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" >
+                <{$block.lang_menuuser}></td>
+			</tr>
+		</table>
+		<table border="0" width="100%">
+			<tr>
+				<td id="usermenu">
+                <a href="<{$xoops_url}>/user.php">
+                <img src="<{$block.img_profileuser}>" alt="" align="left">&nbsp;<{$block.lang_profileuser}></a>
+				<a href="<{$xoops_url}>/edituser.php" alt="<{$block.lang_editaccount}>">
+				<img src="<{$block.img_edit}>" alt="<{$block.lang_editaccount}>" align="left">&nbsp;<{$block.lang_editaccount}></a>
+				<a href="<{$xoops_url}>/modules/socialnet/birthdaybegin.php" alt="<{$block.lang_mybirthday}>">
+				<img src="<{$block.img_mybirthday}>" alt="<{$block.lang_mybirthday}>" align="left">&nbsp;<{$block.lang_mybirthday}></a>
+				<a href="<{$xoops_url}>/modules/socialnet/buddybegin.php" alt="<{$block.lang_buddyfriends}>">
+				<img src="<{$block.img_buddyfriends}>" alt="<{$block.lang_buddyfriends}>" align="left">&nbsp;<{$block.lang_buddyfriends}></a>
+				<{if $block.messagesnumber > 0}>
+                <a href="<{$xoops_url}>/modules/pm" class="highlight">
+                <img src="<{$block.img_messagesnew}>" alt="" align="left">&nbsp;<{$block.lang_messagesnew}>
+                &nbsp;(<span style="color:#ff0000; font-weight: bold;"><{$block.messagesnumber}></span>)</a>
+				<{else}>
+                <a href="<{$xoops_url}>/modules/pm">
+                <img src="<{$block.img_messages}>" alt="" align="left" >&nbsp;<{$block.lang_messages}></a>
+				<{/if}>
+                <a href="<{$xoops_url}>/notifications.php">
+                <img src="<{$block.img_notifications}>" alt="" align="left">&nbsp;<{$block.lang_notifications}></a>
+				<a href="<{$xoops_url}>/user.php?op=logout">
+                <img src="<{$block.img_disconnect}>" alt="" align="left">&nbsp;<{$block.lang_disconnect}></a>
+
+		<table border="0" width="100%">
+			<tr>
+				<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" >
+                <{$block.lang_administration}></td>
+			</tr>
+		</table>
+				<{if $xoops_isadmin}>
+	        	<a href="<{$xoops_url}>/modules/socialnet/langbegin.php">
+                <img src="<{$block.img_languagetool}>" alt="" align="left">&nbsp;<{$block.lang_languagetool}></a>
+				<{/if}>
+	        	<a href="<{$xoops_url}>/modules/socialnet/configs.php">
+                <img src="<{$block.img_whocansee}>" alt="" align="left">&nbsp;<{$block.lang_whocansee}></a>
+				<{if $xoops_isadmin}>
+	        	<a href="<{$xoops_url}>/admin.php">
+                <img src="<{$block.img_administration}>" alt="" align="left">&nbsp;<{$block.lang_administration}></a>
+				<{/if}>
+                </td>
+			</tr>
+		</table>
+		<{else}>
+		<table border="0" width="100%">
+			<tr>
+				<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" >
+				<{$block.lang_login}></td>
+			</tr>
+			
+		</table>
+		<form action="<{$xoops_url}>/user.php" method="post">
+		<table border="0" width="100%" cellspacing="6" cellpadding="0" >
+			<tr>
+				<td align="left">
+				<input type="text" name="uname" size="14" value="<{$block.lang_user}>" onblur="if(this.value=='')this.value='<{$block.lang_user}>';" onfocus="if(this.value=='<{$block.lang_user}>')this.value='';"  maxlength="60" /><br />
+                </td>
+            </tr>
+			<tr>
+				<td align="left">
+                <input type="password" name="pass" size="14" value="<{$block.lang_user}>" onblur="if(this.value=='')this.value='<{$block.lang_user}>';" onfocus="if(this.value=='<{$block.lang_user}>')this.value='';" maxlength="32"  />
+                </td>
+            </tr>
+            <tr>
+            	<td>
+                 <{if isset($block.lang_rememberme)}>
+                <input type="checkbox" name="rememberme" value="On" class ="formButton" checked /><{$block.lang_rememberme}><br />
+                <{/if}>
+                </td>
+            </tr>
+            <tr>
+            	<td>
+                <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+                <input type="hidden" name="op" value="login" />
+                <input type="submit" value="<{$block.lang_enter}>" />
+                <{$block.sslloginlink}></p>
+                </p>
+                <p><{$block.forgotpass}></p>
+				</td>
+			</tr>
+		</table>
+        </form>
+		
+		<{/if}>
+
+		<br />
+
+		<table border="0" width="100%">
+			<tr>
+				<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" >
+				<{$block.lang_online}></td>
+			</tr>
+		</table>
+		<table border="0" width="100%">
+			<tr>
+				<td><img src="<{$xoops_url}>/modules/socialnet/images/users/online.gif" alt="" title="" /></td>
+				<td><b> <{$block.lang_conected}></b></td>
+				<td><b><{$block.online_total}></b></td>
+			</tr>
+			<tr>
+				<td> <img src="<{$xoops_url}>/modules/socialnet/images/users/users.gif" alt="" title="" /></td>
+				<td> <{$block.lang_members}></td>
+				<td><{$block.online_members}></td>
+			</tr>
+			<tr>
+				<td> <img src="<{$xoops_url}>/modules/socialnet/images/users/guests.gif" alt="" title="" /></td>
+				<td> <{$block.lang_guests}></td>
+				<td><{$block.online_guests}></td>
+			</tr>
+			<tr>
+				<td><img src="<{$xoops_url}>/modules/socialnet/images/users/search.gif" alt="" title="" /></td>
+				<td><{$block.lang_bots}></td>
+				<td><{$block.online_bots}></td>
+			</tr>
+		</table>
+        
+        <br />
+        
+		<{if $block.statsreg == 1}>
+		<table border="0" width="100%" id="table9">
+			<tr>
+				<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" >
+				<{$block.lang_stats}></td>
+			</tr>
+			<tr>
+			<{if $block.lastuser == 1}>
+			<td>
+			<marquee scrollamount="1" width="100%" scrolldelay="30" truespeed=true><{$block.newmembers}></marquee>
+			</td>
+			<{/if}>
+			</tr>
+		</table>
+		<table border="0" width="100%">
+			<tr>
+				<td><img src="<{$xoops_url}>/modules/socialnet/images/users/registered.gif"></td>
+				<td><b><{$block.lang_registered}></b></td>
+				<td><b><{$block.usersregistered}></b></td>
+			</tr>
+			<tr>
+				<td><img src="<{$xoops_url}>/modules/socialnet/images/users/today.gif"></td>
+				<td><{$block.lang_today}></td>
+				<td><{$block.registeredtoday}></td>
+			</tr>
+			<tr>
+				<td><img src="<{$xoops_url}>/modules/socialnet/images/users/yesterday.gif"></td>
+				<td><{$block.lang_yesterday}></td>
+				<td><{$block.registeredyesterday}></td>
+			</tr>
+		</table>
+		<{/if}>
+
+		<br />
+
+		<{if $block.seeconected == 1}>
+		<table border="0" width="100%">
+			<tr>
+				<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" >
+				<{$block.lang_conected}></td>
+			</tr>
+		</table>
+		<table border="0" width="100%">
+			<tr>
+				<{$block.online_names}>
+			</tr>
+
+		<table border="0" width="100%">
+			<tr>
+				<td align="center" style="height:20px; vertical-align:middle; background-image:url(<{$xoops_url}>/modules/socialnet/images/users/background.gif);" >
+				<{$block.lang_online}></td>
+			</tr>
+		</table>
+
+			<tr>
+          <td ><a onclick="this.style.behavior='url(#default#homepage)'; this.setHomePage('<{$xoops_url}>');" <a href="<{$xoops_url}>/#">
+<img src="<{$block.img_favorite}>" alt="<{$block.lang_favorite}>" align="left">&nbsp;<{$block.lang_homepage}></a>
+<br>
+<img src="<{$block.img_homepage}>" alt="<{$block.lang_homepage}>" align="left">
+<script language="JavaScript"> 
+<!-- Begin 
+if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) { 
+var url="<{$xoops_url}>"; 
+var title="<{$xoops_sitename}>"; 
+document.write('<A HREF="javascript:window.ext'); 
+document.write('ernal.AddFavorite(url,title);" '); 
+document.write('onMouseOver=" window.status='); 
+document.write("'Add our site to your favorites!'; return true "); 
+document.write('"onMouseOut=" window.status='); 
+document.write("' '; return true "); 
+document.write('"><{$block.lang_favorite}></a>'); 
+} 
+else { 
+var msg = "Don't forget to bookmark us!"; 
+if(navigator.appName == "Netscape") msg += "  (CTRL-D)"; 
+document.write(msg); 
+} 
+// End --> 
+</script></td>
+
+		</table>
+		<{/if}>
+		</tr>
+</table>
+<{if $block.messagesnumber > 0}>
+<{if $block.seepopup == 1}>
+<script language="JavaScript" src="<{$xoops_url}>/modules/socialnet/js/messagepopup.js"></script>
+<style type="text/css"> DIV.qlabel {font-size: 12pt; font-weight: bold; text-align: center; color: blue; padding: 0px;  margin: 0px;  font-family: Verdana;letter-spacing: 0.03em; border-left: 1px solid #FFFFFF;} </style>
+<script language="JavaScript">
+				var direccion1="<{$xoops_url}>"+"/viewpmsg.php";
+				var direccion2=location.href;
+				if (!(direccion1==direccion2))
+				{
+				caja = new QBoxRes(13, 13, 13, 13,"<{$xoops_url}>/modules/socialnet/images/users/wtc.gif", "<{$xoops_url}>/modules/socialnet/images/users/wtr.gif", "<{$xoops_url}>/modules/socialnet/images/users/wmr.gif","<{$xoops_url}>/modules/socialnet/images/users/wbr.gif", "<{$xoops_url}>/modules/socialnet/images/users/wbc.gif","<{$xoops_url}>/modules/socialnet/images/users/wbl.gif","<{$xoops_url}>/modules/socialnet/images/users/wml.gif","<{$xoops_url}>/modules/socialnet/images/users/wtl.gif","#FFE831", "<{$xoops_url}>/modules/socialnet/images/users/wbg.gif",QWndCtrl.FADEIN + QWndCtrl.HBARNOUT);
+				boton= new QButtonRes(QButton.NORMAL, 46, 29,"<{$xoops_url}>/modules/socialnet/images/users/btn2n.gif", "<{$xoops_url}>/modules/socialnet/images/users/btn2p.gif");
+				mb = new QMessageBox(null, "mb", caja, boton, "Test");
+				mb.alert('<{$block.lang_messagepop}>            ');
+				}
+</script>
+<{/if}>
+<{/if}>
+

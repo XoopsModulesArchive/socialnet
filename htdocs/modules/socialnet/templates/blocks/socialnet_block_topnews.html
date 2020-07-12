@@ -1,0 +1,7 @@
+<div>
+    <ul>
+        <{foreach item=news from=$block.stories}>
+            <li style="clear:both;"><a href="<{$xoops_url}>/modules/socialnet/newsarticle.php?storyid=<{$news.id}>"><{$news.title}></a> (<{$news.hits}>)<br /><{$news.teaser}></li>
+        <{/foreach}>
+    </ul>
+</div>

@@ -1,0 +1,8 @@
+<marquee behavior="scroll" direction="up" width="100%" height="250" scrollamount="1" scrolldelay="60" onmouseover="this.stop()" onmouseout="this.start()">
+<{section name=i loop=$block}>
+    <div style="width:80%; text-align: center; page-break-after: always; margin: auto; page-break-before: always;">
+    <a href="<{$xoops_url}>/modules/socialnet/album.php?uid=<{$block[i].uid_voted}>" alt="<{$block[i].caption}>" title="<{$block[i].caption}>"><img src="<{$xoops_upload_url}>/socialnet/photos/thumb_<{$block[i].img_filename}>" /><br /><{$block[i].uname}> </a>
+   
+    </div>
+<{/section}>
+</marquee>

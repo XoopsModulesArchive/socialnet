@@ -1,0 +1,84 @@
+<{include file="db:socialnet_navbarbelow.html"}>
+
+<h2 class="head"><img border="0" src="<{$xoops_url}>/modules/socialnet/images/icons/userpage.gif" width="32" height="32"><{$smarty.const._MD_SOCIALNET_YOUR_PAGE}></h2><{$smarty.const._MD_SOCIALNET_CREATION_DATE}><{$up_dateformated}> | <{$smarty.const._MD_SOCIALNET_HITS}> <{$up_hits}>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#FFFFCC" align="center">
+      <div align="center">
+	<{if $up_dateformated != ''}><a href="#" title="<{$smarty.const._MD_SOCIALNET_CREATION_DATE}> <{$up_dateformated}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/calendar.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_CREATION_DATE}> <{$up_dateformated}>" /></a>&nbsp;<{/if}>
+	<{if $up_hits != ''}><a href="#" title="<{$smarty.const._MD_SOCIALNET_HITS}> <{$up_hits}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/view.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_HITS}> <{$up_hits}>" /></a>&nbsp;<{/if}>
+	<a href="<{$xoops_url}>/modules/socialnet/pageedit.php" title="<{$smarty.const._MD_SOCIALNET_PUBLISH}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/publish.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_PUBLISH}>" /></a>&nbsp;
+	<{if $currentuser}><a href="<{$xoops_url}>/modules/socialnet/pageedit.php?op=edit" title="<{$smarty.const._MD_SOCIALNET_EDIT}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/edit.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_EDIT}>" /></a>&nbsp;<{/if}>
+	<{if $mail_cmd}><a href="<{$mail_cmd}>" title="<{$smarty.const._MD_SOCIALNET_EMAIL_SEND}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/friend.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_EMAIL_SEND}>" /></a>&nbsp;<{/if}>
+	<a href="<{$xoops_url}>/modules/socialnet/pageprint.php?page_id=<{$up_pageid}>" target="_blank" rel="nofollow" title="<{$smarty.const._MD_SOCIALNET_PRINTABLE}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/print.gif" width="18" height="18" border="0" alt="<{$smarty.const._MD_SOCIALNET_PRINTABLE}>" /></a>&nbsp;
+      <a href="<{$xoops_url}>/modules/socialnet/pagemakepdf.php?page_id=<{$up_pageid}>" target="_blank" rel="nofollow" title="<{$smarty.const._MD_SOCIALNET_PDF}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/pdf.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_PDF}>" /></a>&nbsp;
+	<a href="<{$xoops_url}>/modules/socialnet/pagelist.php" title="<{$smarty.const._MD_SOCIALNET_PAGELIST}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/search.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_PAGELIST}>" /></a>&nbsp;
+    <{if $is_admin}><a href="<{$xoops_url}>/modules/socialnet/pagedelete.php?id=<{$up_pageid}>" <{$confirm_delete}> title="<{$smarty.const._DELETE}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/dele.gif" border="0" alt="<{$smarty.const._DELETE}>" /></a>&nbsp;<{/if}>
+	<{if $allowrss}><a href="<{$xoops_url}>/modules/socialnet/rss.php" target="_blank" title="<{$smarty.const._MD_SOCIALNET_RSS_FEED}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/rss.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_RSS_FEED}>" /></a><{/if}>
+</div>
+    </td>
+  </tr>
+</table>
+
+<p><br>
+<h3><{$up_title}></h3> 
+</p>
+<{if $up_text}>
+	<{$up_text}>
+
+<{else}>
+	<div style='text-align:center; font-weight: bold;'><{$smarty.const._MD_SOCIALNET_EMPTY_PAGE}></div>
+<{/if}>
+
+<br /><br />
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#FFFFCC" align="center">
+      <div align="center">
+	<{if $currentuser}><a href="<{$xoops_url}>/modules/socialnet/pageedit.php?op=edit" title="<{$smarty.const._MD_SOCIALNET_EDIT}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/edit.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_EDIT}>" /></a>&nbsp;<{/if}>
+	<{if $mail_cmd}><a href="<{$mail_cmd}>" title="<{$smarty.const._MD_SOCIALNET_EMAIL_SEND}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/friend.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_EMAIL_SEND}>" /></a>&nbsp;<{/if}>
+	<a href="<{$xoops_url}>/modules/socialnet/pageprint.php?page_id=<{$up_pageid}>" target="_blank" rel="nofollow" title="<{$smarty.const._MD_SOCIALNET_PRINTABLE}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/print.gif" width="18" height="18" border="0" alt="<{$smarty.const._MD_SOCIALNET_PRINTABLE}>" /></a>&nbsp;
+    <a href="<{$xoops_url}>/modules/socialnet/pagemakepdf.php?page_id=<{$up_pageid}>" target="_blank" rel="nofollow" title="<{$smarty.const._MD_SOCIALNET_PDF}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/pdf.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_PDF}>" /></a>&nbsp;
+	<a href="<{$xoops_url}>/modules/socialnet/pagelist.php" title="<{$smarty.const._MD_SOCIALNET_PAGELIST}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/search.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_PAGELIST}>" /></a>&nbsp;
+    <{if $is_admin}><a href="<{$xoops_url}>/modules/socialnet/pagedelete.php?id=<{$up_pageid}>" <{$confirm_delete}> title="<{$smarty.const._DELETE}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/dele.gif" border="0" alt="<{$smarty.const._DELETE}>" /></a>&nbsp;<{/if}>
+
+</div>
+
+<div style='text-align:center; font-weight: bold;'><{$smarty.const._MD_SOCIALNET_CREATION_DATE}><{$up_dateformated}> | <{$smarty.const._MD_SOCIALNET_HITS}> <{$up_hits}></div>
+
+</td>
+</tr>
+</table>
+
+<div style="text-align: center; padding: 3px; margin:3px;">
+	<{$commentsnav}>
+	<{$lang_notice}>
+</div>
+
+<br>
+<br>
+
+
+<center>
+<br>
+<br>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+
+<div style="margin: 3px; padding: 3px;">
+<!-- start comments loop -->
+<{if $comment_mode == "flat"}>
+  <{include file="db:system_comments_flat.html"}>
+<{elseif $comment_mode == "thread"}>
+  <{include file="db:system_comments_thread.html"}>
+<{elseif $comment_mode == "nest"}>
+  <{include file="db:system_comments_nest.html"}>
+<{/if}>
+<!-- end comments loop -->
+</div>
+<{include file="db:socialnet_navbarfacebookstyle.html"}>
+<{include file="db:socialnet_footer.html"}>

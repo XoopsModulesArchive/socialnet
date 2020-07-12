@@ -1,0 +1,35 @@
+<{include file="db:socialnet_navbarbelow.html"}>
+
+<h3><{$smarty.const._MD_SOCIALNET_YOUR_PAGE}></h3>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%" bgcolor="#FFFFCC" align="center">
+      <p align="center">
+	<a href="<{$xoops_url}>/modules/socialnet/pageuser.php" title="<{$smarty.const._MD_SOCIALNET_YOUR_PAGE}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/userpage.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_YOUR_PAGE}>" /></a>&nbsp;
+    <a href="<{$xoops_url}>/modules/socialnet/pagelist.php" title="<{$smarty.const._MD_SOCIALNET_PAGELIST}>"><img src="<{$xoops_url}>/modules/socialnet/images/icons/search.gif" border="0" alt="<{$smarty.const._MD_SOCIALNET_PAGELIST}>" /></a></p>
+    </td>
+  </tr>
+</table><br>
+<form method="post" name="socialnet_edit" id="socialnet_edit" action="<{$xoops_url}>/modules/socialnet/pageedit.php">
+<table border="0">
+<tr>
+	<td><{$smarty.const._MD_SOCIALNET_TITLE}></td>
+	<td><input type="text" name="up_title" value="<{$up_title}>" size="50" maxlength="255" /></td>
+</tr>
+<tr>
+	<td><{$smarty.const._MD_SOCIALNET_CONTENT}></td>
+	<td><{$editor}></td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><input type="hidden" name="up_pageid" value="<{$up_pageid}>" /><input type="hidden" name="op" value="save" /><input type="reset" name="raz" value="<{$smarty.const._CANCEL}>" />&nbsp;<input type="submit" name="go" value="<{$smarty.const._SUBMIT}>" /></td>
+</tr>
+</table>
+</form>
+<br><br><br>
+<center>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+<{include file="db:socialnet_navbarfacebookstyle.html"}>
+<{include file='db:socialnet_footer.html'}>

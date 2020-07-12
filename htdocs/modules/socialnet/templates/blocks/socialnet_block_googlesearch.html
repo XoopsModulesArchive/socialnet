@@ -1,0 +1,40 @@
+<!-- Begin SocialNet translate -->
+<div id="wmssg"><a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_GERMAN}>', '<{$smarty.const._MB_BLO_TO_GERMAN}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/de.gif" alt="<{$smarty.const._MB_BLO_TRANS_GERMAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_SPANISH}>', '<{$smarty.const._MB_BLO_TO_SPANISH}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/es.gif" alt="<{$smarty.const._MB_BLO_TRANS_SPANISH}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_FRENCH}>', '<{$smarty.const._MB_BLO_TO_FRENCH}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/fr.gif" alt="<{$smarty.const._MB_BLO_TRANS_FRENCH}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_ITALIAN}>', '<{$smarty.const._MB_BLO_TO_ITALIAN}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/it.gif" alt="<{$smarty.const._MB_BLO_TRANS_ITALIAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_JAPONESE}>', '<{$smarty.const._MB_BLO_TO_JAPONESE}>', 'resizable,scrollbars,status'))">
+<br>
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/jp.gif" alt="<{$smarty.const._MB_BLO_TRANS_JAPONESE}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_KOREAN}>', '<{$smarty.const._MB_BLO_TO_KOREAN}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/kr.gif" alt="<{$smarty.const._MB_BLO_TRANS_KOREAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_PORTUGUESE}>', '<{$smarty.const._MB_BLO_TO_PORTUGUESE}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/br.gif" alt="<{$smarty.const._MB_BLO_TRANS_PORTUGUESE}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MB_BLO_PAIR_CHINESE}>', '<{$smarty.const._MB_BLO_TO_CHINESE}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/cn.gif" alt="<{$smarty.const._MB_BLO_TRANS_CHINESE}>" border="0" width="18" height="12" /></a></div>
+<b><{$smarty.const._MB_SOCIALNET_BLO_TRANSLATE}></b>
+<!-- End SocialNet translate -->
+<br>
+<br>
+<!-- Begin Google Search  -->
+<form action="<{$block.link}>"
+	method="get"
+	name="google_search"
+	>
+<img border="0" src="<{$xoops_url}>/modules/socialnet/images/icons/google.gif" width="61" height="25"><br>
+	<input type="text" name="q" size="15" accesskey="<{$block.key}>" /><br />
+	<input type="hidden" name="ie" value="<{$block.char}>" />
+	<input type="hidden" name="oe" value="<{$block.char}>" />
+	<input type="hidden" name="hl" value="<{$block.lang}>" />
+	<input type="hidden" name="domains" value="<{$block.httphost}>" />
+	<input type="radio" id="site" name="sitesearch" value="<{$block.httphost}>"
+	<{if $block.default == 1 }>
+	checked="checked"
+ 	<{/if}>
+	/><label for="site"><{$block.lang_search_site}></label><br />
+	<input type="radio" id="www" name="sitesearch" value=""
+	<{if $block.default != 1 }>
+	checked="checked"
+ 	<{/if}>
+	/><label for="www"><{$block.lang_search_www}></label>
+	<br /><input type="submit" value="<{$block.lang_search_go}>" />
+</form>
+<!-- End Google Search  -->
+

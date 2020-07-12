@@ -1,0 +1,96 @@
+NOTA: Jueves de 11 de marzo de 2010  
+
+1. Este lanzamiento es BETA, no es recomendado en una produccion real
+Vea el modulo SocialNet funcionando en la version xoops 2.4.4 en espanol vaya aqui
+
+Por favor reporte todos los bugs que usted encuentre. clic aqui
+http://www.ipwgc.com/socialnet/modules/socialnet/forumstart.php
+
+2. Para bajar el módulo socialnet y los archivos de idioma vaya aquí
+http://www.ipwgc.com/socialnet/modules/wfdownloads/
+
+3. Estos son los archivos de idiomas que estan disponibles
+/solcialnet_upgrade_english/
+/solcialnet_upgrade_french/
+/solcialnet_upgrade_german/
+/solcialnet_upgrade_italian/
+/solcialnet_upgrade_portuguesebr/
+/solcialnet_upgrade_spanish/
+
+4. Las siguientes carpetas y archivos no requieren traducción, 
+ellos están listos. Jueves de 11 de marzo de 2010 
+/solcialnet_upgrade_english /  
+/solcialnet_upgrade_spanish /  
+  
+:: INSTRUCCIONES PARA TRADUCIR EN OTROS IDIOMAS::  
+  
+EJEMPLO CON LAS CARPETAS DEL IDIOMA EN FRANCES  
+Suba a su servidor todos los archivos que están en las siguientes carpetas  
+/socialnet_upgrade_french/modules/socialnet/language/french  
+  
+SU-SITE/modules/socialnet/language/french  
+SU-SITE/modules/socialnet/language/french/mail_template  
+SU-SITE/modules/socialnet/templates  
+SU-SITE/modules/socialnet/templates/blocks  
+  
+SUBA LOS SIGUIENTES ARCHIVOS EN SUS RESPECTIVAS CARPETAS  
+/modules/socialnet/templates/socialnet_navbar.html  
+/modules/socialnet/templates/socialnet_navbarbelow.html  
+/modules/socialnet/templates/socialnet_navbarfacebookstyle.html  
+/modules/socialnet/templates/socialnet_navbarfaceprofile.html  
+/modules/socialnet/templates/blocks/socialnet_block_googlesearch.html  
+/modules/socialnet/templates/blocks/socialnet_block_users.html  
+  
+  
+::TRADUCCION EN OTROS IDIOMAS::  
+1. Usted tiene dos opciones para traducir el Módulo SocialNet  
+A) Traducción o corrección manual, trabajando junto con el programa Excel.  
+B) Traducción o corrección manual, trabajando junto con la herramienta de traducción incorporada en el modulo socialnet.
+  
+TRADUCCIÓN Y CORRECCIONES CON EL PROGRAMA MICROSOFT EXCEL  
+2. Abra la carpeta /english_onlytext/ y busque por los archivo que usted quiere traducir.  
+:: Estas carpetas contienen sólamente el texto::  
+language_socialnet_text_only/english_only_text/about.txt  
+language_socialnet_text_only/english_only_text/admin.txt  
+language_socialnet_text_only/english_only_text/blocks.txt  
+language_socialnet_text_only/english_only_text/main.txt  
+language_socialnet_text_only/english_only_text/modinfo.txt  
+  
+3. En las siguientes carpetas usted encontrara los archivos traducidos en programa Excel. 
+Las siguientes carpetas fueron traducidas por un programa de traducción, pero ellos necesitan ser corregidos.  
+/solcialnet_upgrade_french/  
+/solcialnet_upgrade_german/  
+/solcialnet_upgrade_italian/  
+/solcialnet_upgrade_portuguesebr/  
+  
+::IMPORTANTE::  
+Una vez que usted ha realazado las correcciones, 
+por favor énvíe los archivos a support@ipwgc.com
+de esta manera podre colocar al dia las carpeta de lenguage en sus diferentes idiomas.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+  
+::TRADUCCION Y CORRECCIONES CON LA HERRAMIENTA DE TRADUCCIÓN DEL MODULO SOCIALNET::  
+  
+1. Mire al lado izquierdo en el bloque del usuario, clic herramienta de idioma.  
+YOURSITE/modules/socialnet/langbegin.php  
+  
+Instrucciones: Seleccione módulo socialnet,   
+Cloc en botón envíar, y siga las instrucciones del programa de herramienta de idioma.
+  
+2. Si su idioma no aparece en la sección de herramientas de traducción,   
+créelo a través del administrador de módulo de socialnet.
+  
+::IMPORTANTE::  
+Una vez que usted ha realazado las correcciones, por favor énvíe los archivos a support@ipwgc.com
+de esta manera podre colocar al dia las carpeta de lenguage en sus diferentes idiomas.
+  
+USE EL FORO PARA SOPORTE Y PREGUNTAS  
+http://www.ipwgc.com/socialnet/modules/socialnet/forumstart.php  
+  
+Saludos,  
+David Yanez Osses  
+Administrador del portal  
+http://www.ipwgc.com/socialnet/  
+  
+  

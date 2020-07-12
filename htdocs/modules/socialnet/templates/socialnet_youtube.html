@@ -1,0 +1,93 @@
+<{include file="db:socialnet_navbar.html"}>
+<{ if $isOwner }>
+	<div id="socialnet-video-form" class="outer">
+		<h2 id="socialnet-video-form-title" class="head">
+            &nbsp; <img border="0" src="<{$xoops_url}>/modules/socialnet/images/menu/motion.gif" width="32" height="32">
+            <{$lang_addvideos}>
+		</h2>
+		<form name="form_videos" id="form_videos" action="<{$xoops_url}>/modules/socialnet/submit_video.php" method="post" enctype="multipart/form-data" >
+			<{$token}>
+			<p class="even">
+				<{$lang_videohelp}> <{$xoops_sitename}>.
+			</p>
+			<p class="odd">
+				<label for="codigo">
+					<{$lang_youtubecodeLabel}>
+					: 
+				</label>
+				<input type='text' name='codigo' id='codigo' size='50' maxlength='650' value='' />
+			</p>
+			<p class="even">
+				<label for="codigo">
+					<{$lang_captionLabel}>
+					: 
+				</label>
+				<textarea name='caption' id='caption' rows='5' cols='50'></textarea>
+			</p>
+			<p class="foot">
+				<input type='submit' class='formButton' name='submit_button'  id='submit_button' value='<{$lang_submitValue}>' />
+			</p>
+		</form>
+	</div>
+<{ /if}>
+
+<div id="socialnet-videos-container" class="outer">
+	<h2 id="socialnet-videos-title" class="head">
+		<a href="<{$xoops_url}>/userinfo.php?uid=<{$uid_owner}>">
+			<{$lang_videos}>
+		</a>
+	</h2>
+	<{if $nb_videos<=0}>
+		<h2>	
+			<{$lang_novideoyet}>
+		</h2>
+	<{/if}>
+	
+		
+	
+	<{section name=i loop=$videos}>
+		<div class="socialnet-video-container <{cycle values=" odd,even"}>">
+			<div class="socialnet-video">       
+				<object width="<{$width}>" height="<{$height}>">
+					<param name="movie" value="http://www.youtube.com/v/<{$videos[i].url}>"></param>
+					<param name="wmode" value="transparent"></param>
+					<embed src="http://www.youtube.com/v/<{$videos[i].url}>" type="application/x-shockwave-flash" wmode="transparent" width="<{$width}>" height="<{$height}>"></embed>
+				</object>	
+			</div>
+			<div class="socialnet-video-details">
+				<p class="socialnet-video-desc">
+					<{$videos[i].desc}>
+				</p> <{ if $isOwner==1 }>
+				<form action="<{$xoops_url}>/modules/socialnet/delvideo.php" method="post" id="deleteform" class="socialnet-video-forms">
+            		<input type="hidden" value="<{$videos[i].id}>" name="cod_video" />
+                	<{$token}>
+					<input name="submit" type="image" alt="<{$lang_delete}>" title="<{$lang_delete}>" src="<{$xoops_url}>/modules/socialnet/images/icons/dele.gif"/>
+	            </form> 
+    	        <form action="<{$xoops_url}>/modules/socialnet/editdescvideo.php" method="post" id="editform" class="socialnet-video-forms">
+        	    	<input type="hidden" alt="<{$lang_edit}>" title="<{$lang_edit}>" value="<{$videos[i].id}>" name="video_id" />
+            	    <{$token}>
+                	<input name="submit" type="image" alt="<{$lang_editdesc}>" title="<{$lang_editdesc}>" src="<{$xoops_url}>/modules/socialnet/images/icons/edit.gif"/>
+            	</form>
+	            <form action="<{$xoops_url}>/modules/socialnet/mainvideo.php" method="post" id="mainform" class="socialnet-video-forms">
+    	        	<input type="hidden" value="<{$videos[i].id}>" name="video_id" />
+        	        <{$token}>
+            	    <input name="submit" type="image" alt="<{$lang_makemain}>" title="<{$lang_makemain}>" src="<{$xoops_url}>/modules/socialnet/images/icons/mainvideo.gif"/>
+           		</form>
+           		<{ /if}>
+			</div> 
+		</div>          
+	<{/section}>
+</div>
+<div style="clear:both;width:100%"></div>
+<div id="socialnet-navigation">
+	<{$pageNav}>
+</div>
+<div style="clear:both;width:100%"></div>
+<br><br><br>
+<center>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+<{include file="db:socialnet_navbarfacebookstyle.html"}>
+<{include file="db:socialnet_footer.html"}>

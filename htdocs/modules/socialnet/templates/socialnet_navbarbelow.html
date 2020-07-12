@@ -1,0 +1,49 @@
+<!-- Begin SocialNet translate -->
+<div id="wmssg"><a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_GERMAN}>', '<{$smarty.const._MD_TO_GERMAN}>', 'resizable,scrollbars,status'))">
+<img src="<{$xoops_url}>/modules/socialnet/images/flags/de.gif" alt="<{$smarty.const._MD_TRANS_GERMAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_SPANISH}>', '<{$smarty.const._MD_TO_SPANISH}>', 'resizable,scrollbars,status'))">
+<img  src="<{$xoops_url}>/modules/socialnet/images/flags/es.gif" alt="<{$smarty.const._MD_TRANS_SPANISH}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_FRENCH}>', '<{$smarty.const._MD_TO_FRENCH}>', 'resizable,scrollbars,status'))">
+<img  src="<{$xoops_url}>/modules/socialnet/images/flags/fr.gif" alt="<{$smarty.const._MD_TRANS_FRENCH}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_ITALIAN}>', '<{$smarty.const._MD_TO_ITALIAN}>', 'resizable,scrollbars,status'))">
+<img  src="<{$xoops_url}>/modules/socialnet/images/flags/it.gif" alt="<{$smarty.const._MD_TRANS_ITALIAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_JAPONESE}>', '<{$smarty.const._MD_TO_JAPONESE}>', 'resizable,scrollbars,status'))">
+<img  src="<{$xoops_url}>/modules/socialnet/images/flags/jp.gif" alt="<{$smarty.const._MD_TRANS_JAPONESE}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_KOREAN}>', '<{$smarty.const._MD_TO_KOREAN}>', 'resizable,scrollbars,status'))">
+<img  src="<{$xoops_url}>/modules/socialnet/images/flags/kr.gif" alt="<{$smarty.const._MD_TRANS_KOREAN}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_PORTUGUESE}>', '<{$smarty.const._MD_TO_PORTUGUESE}>', 'resizable,scrollbars,status'))">
+<img  src="<{$xoops_url}>/modules/socialnet/images/flags/br.gif" alt="<{$smarty.const._MD_TRANS_PORTUGUESE}>" border="0" width="18" height="12" /></a>&nbsp;<a href="#" onclick="javascript: void(window.open('http://translate.google.com/translate?u='+escape(location.href)+'<{$smarty.const._MD_PAIR_CHINESE}>', '<{$smarty.const._MD_TO_CHINESE}>', 'resizable,scrollbars,status'))">
+<img  src="<{$xoops_url}>/modules/socialnet/images/flags/cn.gif" alt="<{$smarty.const._MD_TRANS_CHINESE}>" border="0" width="18" height="12" /></a></div>
+<b><{$smarty.const._MD_SOCIALNET_TRANSLATE}></b>
+<!-- End SocialNet translate -->
+
+<div id="socialnet-section-container">
+
+<div class="socialnet-nav-bar" id="socialnet-nav-bar">
+<p id="breadcrumbs">
+         <a href="<{$xoops_url}>" title="<{$xoops_sitename}> - <{$xoops_slogan}>" >
+		 	<{$lang_home}>
+		 </a> 
+		 > 
+		 <a href="<{$xoops_url}>/modules/socialnet/index.php" title="<{$module_name}>">
+		 	<{$module_name}>
+		 </a> 
+		 > 
+		 <a href="<{$xoops_url}>/modules/socialnet/index.php?uid=<{$uid_owner}>" title="<{$owner_uname}>">
+		 	<{$owner_uname}>
+		 </a> 
+		 > 
+		 <{$section_name}>
+	</p>
+
+    
+    <ul class="tabs-nav">
+		<li <{if $section_name==$lang_profile}>class="tabs-selected" <{/if}>><a href="<{$xoops_url}>/modules/socialnet/index.php?uid=<{$uid_owner}>"> <span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/profile/username.gif"  /><{$lang_profile}></span></a> </li>
+ 		 <{ if $allow_membership !=-1 }><li <{ if $allow_membership !=0}>class="tabs-disabled"<{/if}><{if $section_name==$lang_membership}>class="tabs-selected" <{/if}>> <a href="<{$xoops_url}>/modules/socialnet/membership.php"><span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/menu/registered.gif"  /><{$lang_membership}></span></a> </li><{/if}>
+ 		 <{ if $allow_pagelist !=-1 }><li <{ if $allow_pagelist !=0}>class="tabs-disabled"<{/if}><{if $section_name==$lang_pagelist}>class="tabs-selected" <{/if}>> <a href="<{$xoops_url}>/modules/socialnet/pagelist.php"><span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/icons/search.gif"  /><{$lang_pagelist}></span></a> </li><{/if}>
+ 		 <{ if $allow_your_page !=-1 }><li <{ if $allow_your_page !=0}>class="tabs-disabled"<{/if}><{if $section_name==$lang_your_page}>class="tabs-selected" <{/if}>> <a href="<{$xoops_url}>/modules/socialnet/pageuser.php"><span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/icons/userpage.gif"  /><{$lang_your_page}></span></a> </li><{/if}>
+ 		 <{ if $allow_contactus !=-1 }><li <{ if $allow_contactus !=0}>class="tabs-disabled"<{/if}><{if $section_name==$lang_contactus}>class="tabs-selected" <{/if}>> <a href="<{$xoops_url}>/modules/socialnet/contactus.php"><span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/menu/mailuser.gif"  /><{$lang_contactus}></span></a> </li><{/if}>
+ 		 <{ if $allow_articles !=-1 }><li <{ if $allow_articles !=0}>class="tabs-disabled"<{/if}><{if $section_name==$lang_articles}>class="tabs-selected" <{/if}>> <a href="<{$xoops_url}>/modules/socialnet/news.php"><span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/menu/news.gif"  /><{$lang_articles}></span></a> </li><{/if}>
+ 		 <{ if $allow_popchatmenu !=-1 }><li <{ if $allow_popchatmenu !=0}>class="tabs-disabled"<{/if}><{if $section_name==$lang_popchatmenu}>class="tabs-selected" <{/if}>> <a href="<{$xoops_url}>/modules/socialnet/chatbegin.php"><span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/menu/popchat.gif"  /><{$lang_popchatmenu}></span></a> </li><{/if}>
+ 		 <{ if $allow_forum !=-1 }><li <{ if $allow_forum !=0}>class="tabs-disabled"<{/if}><{if $section_name==$lang_forum}>class="tabs-selected" <{/if}>> <a href="<{$xoops_url}>/modules/socialnet/forumstart.php"><span><img class="socialnet-nav-bar-icon" src="<{$xoops_url}>/modules/socialnet/images/menu/forum.gif"  /><{$lang_forum}></span></a> </li><{/if}>
+
+ 	</ul>
+    <div class="tabs-container">
+    
+    </div>
+</div>
+

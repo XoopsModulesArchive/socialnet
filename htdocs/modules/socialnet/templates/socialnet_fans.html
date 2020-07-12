@@ -1,0 +1,42 @@
+<{include file="db:socialnet_navbar.html"}>
+
+<div  id="socialnet-friends-container" class="outer">        
+<h2 class="head"><{$lang_fanstitle}></h2>
+<{if $lang_nofansyet==""}>
+
+	<{section name=i loop=$friends}>
+		<div class="socialnet-friend <{cycle values=" odd,even"}>">  
+			<p><a href="<{$xoops_url}>/modules/socialnet/index.php?uid=<{$friends[i].uid}>" alt=" <{$friends[i].uname}>" title="<{$friends[i].uname}>"> <{ if $friends[i].user_avatar=="blank.gif" }><img src="<{$xoops_url}>/modules/socialnet/images/profile/noavatar.gif" border="0" width="64" height="64" /> <{ else }> <img src="<{$xoops_upload_url}>/<{$friends[i].user_avatar}>" border="0" width="64" height="64" /><{/if}><{$friends[i].uname}></a></p>
+            <{if $isOwner }><form action="<{$xoops_url}>/modules/socialnet/editfriendship.php" method="post" class="socialnet-friends-deleteform" >
+            <input type="hidden" name="friend_uid" id="friend_uid" value="<{$friends[i].uid}>" />
+            <input name="submit" id="submit" src="<{$xoops_url}>/modules/socialnet/images/users/registered.gif" width="40" height="40" type="image" title="<{$lang_evaluate}>" alt="<{$lang_evaluate}>"/>
+            </form>
+
+            <form action="<{$xoops_url}>/modules/socialnet/delfriendship.php" method="post" class="socialnet-friends-evaluateform">
+            <input type="hidden" name="friend_uid" id="friend_uid" value="<{$friends[i].uid}>" />
+            <input name="submit" id="submit" src="<{$xoops_url}>/modules/socialnet/images/icons/dele.gif" type="image" title="<{$lang_delete}>" alt="<{$lang_delete}>"/>
+            </form>
+		<br><br>
+		<td>
+		<input type="button" value="Add Favorite" onclick="location='<{$xoops_url}>/modules/socialnet/myfavoritesbegin.php?op=add&amp;friendid=<{$uid_owner}> '" />
+		<br><br>&nbsp;
+		<input type="button" value="Show Interest" onclick="location='<{$xoops_url}>/modules/socialnet/myfavoritesbegin.php?op=interest&amp;friendid=<{$uid_owner}>'" /><br><img src="<{$xoops_url}>/modules/socialnet/images/icons/interest.gif" border="0" width="16" height="14" />
+		</td>
+		<{/if}>
+		</div>
+	<{/section}>
+<{ else }>
+<h2 id="socialnet-friends-nofriends"><{$lang_nofansyet}></h2>
+<{ /if}>
+</div>
+<{ if $navigation!='' }>
+<div id="socialnet-navigation"><{$navigation}></div>
+<{ /if}>
+<br><br><br>
+<center>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+<{include file="db:socialnet_navbarfaceprofile.html"}>
+<{include file="db:socialnet_footer.html"}>

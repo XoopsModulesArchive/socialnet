@@ -1,0 +1,38 @@
+<{include file="db:socialnet_navbar.html"}>
+<{include file="db:socialnet_navbarfaceprofile.html"}>
+<div id="socialnet-friends-container" class="outer">        
+<h2 class="head">&nbsp;<img border="0" src="<{$xoops_url}>/modules/socialnet/images/menu/people.gif" width="30" height="32">
+<{$lang_friendstitle}></h2>
+<{if $lang_nofriendsyet==""}>
+	<{section name=i loop=$friends}>
+		<div class="socialnet-friend <{cycle values=" odd,even"}>">  
+			<p><a href="<{$xoops_url}>/modules/socialnet/index.php?uid=<{$friends[i].uid}>" alt=" <{$friends[i].uname}>" title="<{$friends[i].uname}>"> <{ if $friends[i].user_avatar=="blank.gif" }><img src="<{$xoops_url}>/modules/socialnet/images/profile/noavatar.gif" border="0" width="64" height="64" /> <{ else }> <img src="<{$xoops_upload_url}>/<{$friends[i].user_avatar}>" border="0" width="64" height="64" /><{/if}><{$friends[i].uname}></a></p>
+            <{if $isOwner }><form action="<{$xoops_url}>/modules/socialnet/editfriendship.php" method="post" class="socialnet-friends-deleteform" >
+            <input type="hidden" name="friend_uid" id="friend_uid" value="<{$friends[i].uid}>" />
+            <input name="submit" id="submit" src="<{$xoops_url}>/modules/socialnet/images/fans/evaluate.gif" type="image" title="<{$lang_evaluate}>" alt="<{$lang_evaluate}>"/>
+            </form>
+            <form action="<{$xoops_url}>/modules/socialnet/delfriendship.php" method="post" class="socialnet-friends-evaluateform">
+            <input type="hidden" name="friend_uid" id="friend_uid" value="<{$friends[i].uid}>" />
+            <input name="submit" id="submit" src="<{$xoops_url}>/modules/socialnet/images/icons/dele.gif" type="image" title="<{$lang_delete}>" alt="<{$lang_delete}>"/>
+			<{$lang_evaluate}>
+
+            </form>   
+            <{ /if }>
+		</div>
+	<{/section}>
+<{ else }>
+<h2 id="socialnet-friends-nofriends"><{$lang_nofriendsyet}></h2>
+<{ /if}>
+</div>
+<div style="clear:both"></div>
+<{ if $navigation!='' }>
+  <div id="socialnet-navigation"><{$navigation}></div>
+<{ /if}>
+<br><br><br>
+<center>
+<i>
+Maintain By <a href="http://www.ipwgc.com/socialnet/">IPWGC.com Project SocialNet 2010</a>
+</i>
+</center>
+
+<{include file="db:socialnet_footer.html"}>
